@@ -3,9 +3,9 @@
   "version": "0.0.1",
   "type": "module",
   "scripts": {
-    "dev": "echo 'Do not use this command, only use lint to check'",
-    "build": "echo 'Do not use this command, only use lint to check'",
-    "lint": "tsgo -p tsconfig.check.json; npx biome lint; rules/check.sh"
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "tsgo -p tsconfig.check.json; npx biome lint"
   },
   "dependencies": {
     "@radix-ui/react-accordion": "^1.2.8",

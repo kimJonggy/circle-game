@@ -104,3 +104,203 @@ All colors MUST be HSL.
     @apply bg-background text-foreground;
   }
 }
+
+/* Custom High School Edition Styles */
+
+.font-patrick {
+  font-family: 'Patrick Hand', cursive;
+}
+
+.rock-salt-regular {
+  font-family: "Rock Salt", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Chalkboard Background Pattern */
+.chalkboard-bg {
+  background-color: #263828;
+  background-image: url("https://www.transparenttextures.com/patterns/black-scales.png");
+}
+
+/* The Notebook Paper Effect */
+.notebook-paper {
+  background-color: #fdfdfd;
+  background-image:
+    linear-gradient(#e2e8f0 1px, transparent 1px);
+  background-size: 100% 2rem;
+  position: relative;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* The Red Margin Line on the paper */
+.notebook-paper::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 2rem;
+  width: 2px;
+  background-color: #ef4444;
+  /* Red margin */
+  z-index: 10;
+  pointer-events: none;
+}
+
+/* Chalk Text Effect */
+.chalk-text {
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.2);
+}
+
+/* Chalk Outline Box */
+.chalk-border {
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  position: relative;
+}
+
+/* Rough Eraser Button */
+.eraser-btn {
+  background: #d97706;
+  /* Wood color */
+  border-bottom: 4px solid #92400e;
+  transition: all 0.1s;
+}
+
+.eraser-btn:active {
+  transform: translateY(2px);
+  border-bottom: 2px solid #92400e;
+}
+
+/* Custom Icon Styles */
+.icon-drawn {
+  filter: drop-shadow(1px 1px 0px rgba(255, 255, 255, 0.5));
+}
+
+/* From Uiverse.io by mobinkakei */
+/* From Uiverse.io by mobinkakei */
+.cta {
+  display: flex;
+  padding: 6px 18px;
+  /* Reduced padding (approx 50%) */
+  text-decoration: none;
+  font-size: 14px;
+  /* Reduced font size (approx 50%) */
+  color: white;
+  background: #6225e6;
+  transition: 1s;
+  box-shadow: 3px 3px 0 black;
+  /* Reduced shadow */
+  transform: skewX(-15deg);
+  border: none;
+  cursor: pointer;
+  align-items: center;
+  /* Center align items */
+}
+
+.cta:focus {
+  outline: none;
+}
+
+.cta:hover {
+  transition: 0.5s;
+  box-shadow: 5px 5px 0 #fbc638;
+  /* Reduced hover shadow */
+}
+
+.cta .second {
+  transition: 0.5s;
+  margin-right: 0px;
+}
+
+.cta:hover .second {
+  transition: 0.5s;
+  margin-right: 15px;
+  /* Reduced hover animation distance */
+}
+
+.span {
+  transform: skewX(15deg);
+}
+
+.second {
+  width: 10px;
+  /* Reduced container width constraint if needed, or let svg dictate */
+  margin-left: 8px;
+  /* Significantly reduced margin (was 30px) */
+  position: relative;
+  top: 0;
+  /* Centered via flex, removing top offset */
+  display: flex;
+  /* Ensure proper svg containment */
+  align-items: center;
+}
+
+.one {
+  transition: 0.4s;
+  transform: translateX(-60%);
+}
+
+.two {
+  transition: 0.5s;
+  transform: translateX(-30%);
+}
+
+.cta:hover .three {
+  animation: color_anim 1s infinite 0.2s;
+}
+
+.cta:hover .one {
+  transform: translateX(0%);
+  animation: color_anim 1s infinite 0.6s;
+}
+
+.cta:hover .two {
+  transform: translateX(0%);
+  animation: color_anim 1s infinite 0.4s;
+}
+
+@keyframes color_anim {
+  0% {
+    fill: white;
+  }
+
+  50% {
+    fill: #fbc638;
+  }
+
+  100% {
+    fill: white;
+  }
+}
+
+.cta-orange {
+  background: #d97706;
+  /* Amber-600 to match wood/eraser look */
+}
+
+.cta-orange:hover {
+  box-shadow: 10px 10px 0 #fcd34d;
+  /* Amber-300 */
+}
+
+.cta-orange:hover .three,
+.cta-orange:hover .one,
+.cta-orange:hover .two {
+  animation-name: color_anim_orange;
+}
+
+@keyframes color_anim_orange {
+  0% {
+    fill: white;
+  }
+
+  50% {
+    fill: #fcd34d;
+  }
+
+  100% {
+    fill: white;
+  }
+}
